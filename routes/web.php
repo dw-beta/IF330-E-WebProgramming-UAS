@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +42,15 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::post('/submit-registration', [RegistrationController::class, 'store'])->name('submit.registration');
+Route::get('/registration-confirmation', [RegistrationController::class, 'showConfirmation'])->name('registration.confirmation');
 
 //Route::controller(HomeController::class)->group(function(){
 //    Route::get('/index', 'home')->name('homepage.home');
