@@ -195,7 +195,19 @@
     <div class="ppdb">
         <div class="title">PENDAFTARAN PPDB SDIT AR<br />RIDHO TANGERANG</div>
     </div>
-    <form action="login.php" method="post">
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="{{ route('submit.registration') }}" method="post" enctype="multipart/form-data">
+        @csrf
         <div class="daftar">
             <div class="form-group">
                 <label>Tahun Ajaran</label>
@@ -269,10 +281,6 @@
             </div>
         </div>
     </form>
-
-    
         @include ('footer')
-
 </body>
-
 </html>

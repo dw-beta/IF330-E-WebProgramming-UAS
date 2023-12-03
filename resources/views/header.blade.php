@@ -74,6 +74,14 @@
             <a href="fasilitas">FASILITAS</a>
             <a href="ppdb">PPDB</a>
             <a href="kontak">KONTAK</a>
+            @auth
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT</a>
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @else
+                <a href="login">LOGIN</a>
+            @endauth
         </div>
     </div>
     
