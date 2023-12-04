@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/poetsen-one" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Styles -->
     <style>
         body {
@@ -144,7 +146,10 @@
             color: grey;
         }
 
-        input[type=text], input[type=email], input[type=file], select{
+        input[type=text],
+        input[type=email],
+        input[type=file],
+        select {
             font-family: 'Poppins', sans-serif;
             border-radius: 10px;
         }
@@ -162,9 +167,227 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
         }
-        input[type=submit]:hover{
+
+        input[type=submit]:hover {
             background-color: rgba(98, 139, 76, 0.75);
             color: white;
+        }
+
+        /* RESPONSIVE HANDPHONE */
+
+        @media (max-width: 767px) and (min-width: 280px) {
+            .syarat .title {
+                font-family: 'Poetsen One', sans-serif;
+                font-size: 16px;
+                margin-bottom: 60px;
+            }
+
+            .kategorisyarat {
+                display: grid;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .kategorisyarat .syaratumum {
+                padding: 50px;
+                border-radius: 60px;
+                background-color: rgba(255, 216, 117, 0.60);
+                box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-left: 0px;
+                margin-bottom: 20px;
+            }
+
+            .kategorisyarat .syaratumum h4 {
+                font-family: 'Poetsen One', sans-serif;
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+
+            .kategorisyarat .syaratumum p {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+            }
+
+            .kategorisyarat .syaratkhusus {
+                padding: 50px;
+                border-radius: 60px;
+                background-color: rgba(255, 216, 117, 0.60);
+                box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-right: 0px;
+            }
+
+            .kategorisyarat .syaratkhusus h4 {
+                font-family: 'Poetsen One', sans-serif;
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+
+            .kategorisyarat .syaratkhusus p {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+            }
+
+            .alur .title {
+                font-family: 'Poetsen One', sans-serif;
+                font-size: 16px;
+                margin-bottom: 60px;
+            }
+
+            .gambaralur {
+                display: flex;
+                justify-content: center;
+            }
+
+            .gambaralur img {
+                width: 75%;
+            }
+
+            .ppdb .title {
+                font-family: 'Poetsen One', sans-serif;
+                font-size: 16px;
+                margin-bottom: 60px;
+                text-align: center;
+            }
+
+            form {
+                flex-direction: column;
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 30px;
+            }
+
+            .daftar .form-group select {
+                width: 100%;
+                height: 50px;
+            }
+
+            .daftar .form-group input {
+                width: 100%;
+                height: 50px;
+            }
+
+            .daftar .form-group select option {
+                color: grey;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=file],
+            select {
+                font-family: 'Poppins', sans-serif;
+                border-radius: 10px;
+            }
+
+            input[type=submit] {
+                background: #FFD875;
+                padding: 10px 15px;
+                color: black;
+                border-radius: 20px;
+                font-size: 16px;
+                border: none;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+            }
+
+            input[type=submit]:hover {
+                background-color: rgba(98, 139, 76, 0.75);
+                color: white;
+            }
+        }
+
+        /* RESPONSIVE TABLET */
+        @media (max-width: 1270px) and (min-width: 601px) {
+            .kategorisyarat .syaratumum {
+                padding: 50px;
+                border-radius: 60px;
+                background-color: rgba(255, 216, 117, 0.60);
+                box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            .kategorisyarat .syaratumum h4 {
+                font-family: 'Poetsen One', sans-serif;
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+
+            .kategorisyarat .syaratumum p {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            .kategorisyarat .syaratkhusus {
+                padding: 50px;
+                border-radius: 60px;
+                background-color: rgba(255, 216, 117, 0.60);
+                box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            .kategorisyarat .syaratkhusus h4 {
+                font-family: 'Poetsen One', sans-serif;
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+
+            .kategorisyarat .syaratkhusus p {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            form {
+                flex-direction: column;
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 30px;
+            }
+
+            .daftar .form-group select {
+                width: 100%;
+                height: 50px;
+            }
+
+            .daftar .form-group input {
+                width: 100%;
+                height: 50px;
+            }
+
+            input[type=submit] {
+                background: #FFD875;
+                padding: 10px 15px;
+                color: black;
+                border-radius: 20px;
+                font-size: 16px;
+                border: none;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width: 820px) and (min-width: 768px) {
+            .kategorisyarat {
+            display: flex;
+            justify-content: center;
+        }
+
+        .kategorisyarat .syaratumum {
+                padding: 50px;
+                margin-right: 20px;
+            }
+            .kategorisyarat .syaratkhusus {
+                padding: 50px;
+                margin-left: 20px;
+            }
         }
     </style>
 </head>
@@ -173,10 +396,10 @@
     
     @include ('header')
     
-    <div class="syarat">
+    <div class="syarat" data-aos="zoom-in-up">
         <div class="title">PERSYARATAN PENDAFTARAN</div>
     </div>
-    <div class="kategorisyarat">
+    <div class="kategorisyarat" data-aos="zoom-in-up">
         <div class="syaratumum">
             <h4>SYARAT UMUM</h4>
             <p>1. Usia minimal 6 tahun. <br />2. Pendaftaran dilakukan secara <br />online. <br />3. Membayar biaya pendaftaran Rp.<br />300.000.</p>
@@ -189,7 +412,7 @@
     <div class="alur">
         <div class="title">ALUR PENDAFTARAN</div>
     </div>
-    <div class="gambaralur">
+    <div class="gambaralur" data-aos="fade-down">
         <img src="{{ asset('images/ppdb/Alur_pendaftaran_ppdb.png') }}">
     </div>
     <div class="ppdb">
@@ -283,4 +506,7 @@
     </form>
         @include ('footer')
 </body>
+<script>
+    AOS.init();
+</script>
 </html>
