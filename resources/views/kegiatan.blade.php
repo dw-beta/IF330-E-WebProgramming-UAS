@@ -268,7 +268,9 @@
             </div>
         </div>
     </div>
-
+    <br>
+    <br>
+    <br>
     @include ('footer')
 
     <script>
