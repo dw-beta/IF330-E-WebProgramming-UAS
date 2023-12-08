@@ -10,6 +10,20 @@
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <!-- Styles -->
     <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        /* warna handle (bagian yang dapat di-drag) scrollbar */
+        ::-webkit-scrollbar-thumb {
+            background-color: #ffa123;
+            border-radius: 6px;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -17,6 +31,7 @@
         body {
             margin: 0;
             padding: 0;
+            background: linear-gradient(90deg, rgba(215, 197, 168, 1) 0%, rgba(250, 207, 149, 1) 25%, rgba(255, 227, 132, 0.4066001400560224) 100%);
         }
 
         .berita {
@@ -28,6 +43,7 @@
         .berita .title {
             font-family: 'Poetsen One', sans-serif;
             font-size: 24px;
+            border-bottom: 5px solid #ffa123; 
         }
 
         .column {
