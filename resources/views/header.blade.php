@@ -14,7 +14,7 @@
     <style>
     #navbar {
         overflow: hidden;
-        background-color: #FFFACD !important;
+        background-color: #e2c386 !important;
         padding: 15px 10px;
         transition: 0.4s;
         position: fixed;
@@ -23,6 +23,7 @@
         z-index: 99;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         font-family: 'Poetsen One', sans-serif;
+
     }
 
     #navbar a {
@@ -38,11 +39,16 @@
         font-family: 'Poetsen One', sans-serif;
     }
 
+    .navbar-nav{
+        margin-right: 350px;
+    }
+
     #navbar #logo {
         font-size: 20px;
         font-family: 'Poetsen One', sans-serif;
         transition: 0.4s;
         color: #333;
+        margin-left: 400px;
     }
 
     #navbar a:hover {
@@ -73,8 +79,8 @@
 
 <body>
 
-    <div id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="home" class="navbar-brand" id="logo">SDIT AR RIDHO TANGERANG</a>
+    <div id="navbar" class="navbar navbar-expand-lg navbar-light bg-light ">
+        <img src="{{ asset('images/home/logonav.png') }}" style="width: 5%" class="navbar-brand" id="logo">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
