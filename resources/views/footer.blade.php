@@ -10,12 +10,13 @@
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Styles -->
     <style>
-        
         .footer-clean {
             padding: 50px 0;
-            background-color: #FFFACD;
+            background-color: #e2c386;
             color: black;
         }
 
@@ -35,42 +36,50 @@
             margin-bottom: 0;
         }
 
-        .footer-clean ul .alamat{
+        .footer-clean ul .alamat {
             display: flex;
             margin-bottom: 10px;
         }
-        .footer-clean ul .alamat img{
+
+        .footer-clean ul .alamat img {
             width: 30px;
             height: 30px;
             margin-right: 20px;
         }
-        .footer-clean ul .alamat p{
+
+        .footer-clean ul .alamat p {
             font-weight: 500;
             font-family: 'Poppins', sans-serif;
         }
-        .footer-clean ul .phone{
+
+        .footer-clean ul .phone {
             display: flex;
             margin-bottom: 10px;
         }
-        .footer-clean ul .phone p{
+
+        .footer-clean ul .phone p {
             font-weight: 500;
             font-family: 'Poppins', sans-serif;
         }
-        .footer-clean ul .phone img{
+
+        .footer-clean ul .phone img {
             width: 30px;
             height: 30px;
             margin-right: 20px;
         }
-        .footer-clean ul .email{
+
+        .footer-clean ul .email {
             display: flex;
             margin-bottom: 10px;
         }
-        .footer-clean ul .email img{
+
+        .footer-clean ul .email img {
             width: 30px;
             height: 30px;
             margin-right: 20px;
         }
-        .footer-clean ul .email p{
+
+        .footer-clean ul .email p {
             font-weight: 500;
             font-family: 'Poppins', sans-serif;
         }
@@ -105,7 +114,6 @@
             display: inline-block;
             text-align: center;
             border-radius: 50%;
-            border: 1px solid #ccc;
             margin-left: 10px;
             margin-top: 20px;
             color: inherit;
@@ -128,12 +136,13 @@
             }
         }
 
-        .copyright{
+        .copyright {
             display: flex;
             justify-content: center;
-            background-color: #E7E1B0;
+            background-color: #c2a56d;
         }
-        .copyright p{
+
+        .copyright p {
             margin-top: 20px;
             margin-bottom: 20px;
             font-size: 15px;
@@ -141,11 +150,49 @@
             font-family: 'Poppins', sans-serif;
             color: black;
         }
+
+        @media (max-width: 767px) and (min-width: 320px) {
+
+            .footer-clean ul .alamat,
+            .footer-clean ul .phone,
+            .footer-clean ul .email, h3, p {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: start;
+            }
+
+            .footer-clean ul .alamat,
+            .footer-clean ul .phone,
+            .footer-clean ul .email, p {
+                font-size: 12px;
+            }           
+
+            .footer-clean ul .alamat,
+            .footer-clean ul .phone,
+            .footer-clean ul .email, h3 {
+                font-size: 16px;
+            }
+
+            .footer-clean ul .alamat img,
+            .footer-clean ul .phone img,
+            .footer-clean ul .email img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .footer-clean .item.social>a {
+                margin-top: 20px;
+            }
+
+            .copyright p{
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="footer-clean">
+    <div class="footer-clean" data-aos="fade-up">
         <footer>
             <div class="container">
                 <div class="row justify-content-center">
@@ -187,5 +234,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
+<script>
+    AOS.init();
+</script>
 
 </html>
