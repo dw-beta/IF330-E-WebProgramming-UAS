@@ -621,8 +621,7 @@ on<!DOCTYPE html>
 
 <body>
 
-    @section ('header')
-    @endsection
+    @include ('header')
     <div class="judul">
         <img style="width: 50%" data-aos="zoom-in-up" src="{{ asset('images/home/logosdit.png') }}">
     </div>
