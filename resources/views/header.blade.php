@@ -23,7 +23,6 @@
         z-index: 99;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         font-family: 'Poetsen One', sans-serif;
-
     }
 
     #navbar a {
@@ -37,10 +36,7 @@
         border-radius: 4px;
         transition: 0.4s;
         font-family: 'Poetsen One', sans-serif;
-    }
-
-    .navbar-nav{
-        margin-right: 350px;
+        margin: 0 10px;
     }
 
     #navbar #logo {
@@ -48,7 +44,7 @@
         font-family: 'Poetsen One', sans-serif;
         transition: 0.4s;
         color: #333;
-        margin-left: 400px;
+        margin-left: 20px;
     }
 
     #navbar a:hover {
@@ -68,10 +64,12 @@
 
         #navbar a {
             color: #333;
+            margin: 0 5px;
         }
 
         #navbar #logo {
             color: #333;
+            margin-left: 10px;
         }
     }
     </style>
