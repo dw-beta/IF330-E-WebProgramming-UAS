@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+on<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -621,7 +621,8 @@
 
 <body>
 
-    @include ('header')
+    @section ('header')
+    @endsection
     <div class="judul">
         <img style="width: 50%" data-aos="zoom-in-up" src="{{ asset('images/home/logosdit.png') }}">
     </div>
