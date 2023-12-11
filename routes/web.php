@@ -18,6 +18,8 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
+Route::get('/', 'HomeController@index');
+
 Route::get('/home', function () {
     return view('home');
 });
