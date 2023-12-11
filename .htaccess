@@ -1,4 +1,7 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
     RewriteRule ^(.*)$ public/$1 [L]
+    RewriteCond %{REQUEST_URI} ^/resources/views/home\.blade\.php$
+    RewriteRule ^(.*)$ https://sditarridho.info [L,R=301]
 </IfModule>
