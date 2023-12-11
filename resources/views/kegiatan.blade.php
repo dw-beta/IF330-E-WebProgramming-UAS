@@ -198,7 +198,60 @@
 
 
         /* RESPONSIVE HANDPHONE */
-        @media (max-width: 767px) and (min-width: 320px) {}
+        @media (max-width: 767px) and (min-width: 320px) {
+            .keagamaan {
+                margin-top: 100px; /* Reduce top margin */
+            }
+
+            .kegiatan {
+                padding: 15px; /* Decrease padding */
+            }
+
+            .card-title {
+                font-size: 16px; /* Adjust font size for card titles */
+            }
+
+            .slider-wrapper .image-list {
+                grid-template-columns: repeat(2, 1fr); /* Modify columns for image list */
+                gap: 10px; /* Adjust gap between images */
+            }
+
+            .slider-scrollbar {
+                display: none; /* Hide scrollbar for smaller devices */
+            }
+
+            .slider-wrapper .slide-button {
+                display: none; /* Hide slide buttons on smaller screens */
+            }
+        }
+
+        /* RESPONSIVE TABLET */
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .keagamaan {
+                margin-top: 150px; /* Adjust top margin */
+            }
+
+            .kegiatan {
+                padding: 30px; /* Increase padding for better spacing */
+            }
+
+            .card-title {
+                font-size: 20px; /* Slightly increase font size for card titles */
+            }
+
+            .slider-wrapper .image-list {
+                grid-template-columns: repeat(3, 1fr); /* Modify columns for image list */
+                gap: 15px; /* Adjust gap between images */
+            }
+
+            .slider-scrollbar {
+                display: block; /* Show scrollbar */
+            }
+
+            .slider-wrapper .slide-button {
+                display: flex; /* Display slide buttons */
+            }
+        }
     </style>
 </head>
 

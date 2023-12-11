@@ -177,6 +177,61 @@
             padding: 20px;
             text-align: center;
         }
+
+        /* RESPONSIVE PHONE */
+        @media (max-width: 767px) {
+            .fasilitas .title {
+                margin-top: 100px; /* Adjust title margin on smaller screens */
+            }
+
+            .slider-wrapper .image-list {
+                grid-template-columns: repeat(2, 1fr); /* Display fewer images in 2 columns for phones */
+                gap: 10px; /* Adjust gap between images */
+            }
+
+            .slider-wrapper .image-list .image-item {
+                width: 100%; /* Full width for images on phones */
+                height: auto; /* Adjust height to maintain aspect ratio */
+                border-radius: 15px; /* Slightly reduce border radius for better presentation */
+            }
+
+            .container .slider-scrollbar {
+                display: none; /* Hide scrollbar on phones */
+            }
+
+            .slider-wrapper .slide-button {
+                display: none; /* Hide slide buttons on phones */
+            }
+        }
+
+        /* RESPONSIVE TABLET */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .fasilitas {
+                margin-top: 150px; /* Adjust top margin for tablets */
+            }
+
+            .slider-wrapper .image-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Keep a minimum width of 300px for each image */
+                gap: 15px; /* Adjust gap between images */
+            }
+
+            .slider-wrapper .image-list .image-item {
+                width: 100%; /* Occupy full width within the grid */
+                height: auto; /* Adjust height to maintain aspect ratio */
+                border-radius: 20px; /* Adjust border radius for tablets */
+            }
+
+            .container .slider-scrollbar {
+                display: block; /* Show scrollbar on tablets */
+            }
+
+            .slider-wrapper .slide-button {
+                display: flex; /* Display slide buttons on tablets */
+            }
+        }
+
+
     </style>
 </head>
 
