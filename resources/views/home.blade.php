@@ -699,22 +699,22 @@ on<!DOCTYPE html>
     <div class="kartuberita" data-aos="zoom-in-down">
         <div class="column">
             <div class="card" style="background-color: rgba(98, 139, 76, 0.75); color: white;">
-                <img src="">
-                <h4></h4>
+                <img src="{{ asset('images/home/berfoto dengan client.jpeg') }}">
+                <h4>Sejumlah Mahasiswa dari Universitas Multimedia Nusantara (UMN) sedang berkunjung ke sekolah Ar-Ridho untuk melakukan Project Kelompok.</h4>
                 <p><br /><br /><br /><br /><br /></p>
             </div>
         </div>
         <div class="column">
             <div class="card" style="background-color: rgba(98, 139, 76, 0.75); color: white;">
-                <img src="">
-                <h4></h4>
+                <img src="{{ asset('images/home/foto depan ar-ridho.jpeg') }}">
+                <h4>Sejumlah Mahasiswa dari Universitas Multimedia Nusantara (UMN) sedang berkunjung ke sekolah Ar-Ridho untuk melakukan Project Kelompok.</h4>
                 <p><br /><br /><br /><br /><br /></p>
             </div>
         </div>
         <div class="column">
             <div class="card" style="background-color: rgba(98, 139, 76, 0.75); color: white;">
-                <img src="">
-                <h4></h4>
+                <img src="{{ asset('images/home/showcase website.jpeg') }}">
+                <h4>Sejumlah Mahasiswa dari Universitas Multimedia Nusantara (UMN) sedang berkunjung ke sekolah Ar-Ridho untuk melakukan Project Kelompok.</h4>
                 <p><br /><br /><br /><br /><br /></p>
             </div>
         </div>
