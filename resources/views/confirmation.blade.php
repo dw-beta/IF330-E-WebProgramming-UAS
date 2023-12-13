@@ -12,6 +12,7 @@
         body {
             margin: 0;
             padding: 0;
+            background: linear-gradient(90deg, rgba(215, 197, 168, 1) 0%, rgba(250, 207, 149, 1) 25%, rgba(255, 227, 132, 0.4066001400560224) 100%);
             display: flex;
             justify-content: center;
             align-items: center;
