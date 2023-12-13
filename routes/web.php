@@ -18,7 +18,9 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function () {
+    return redirect()->to('/home');
+});
 
 Route::get('/home', function () {
     return view('home');
