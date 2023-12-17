@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('login.index');
     }
 
@@ -19,13 +20,32 @@ class LoginController extends Controller
             return redirect('/home');
         }
 
-        return back()->withErrors(['username' => 'Invalid credentials']); 
+        return back()->withErrors(['username' => 'Invalid credentials']);
     }
 
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/home');
+    }
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        // Check if the authenticated user should be redirected to the admin dashboard
+        if ($user->isAdmin()) { // You should have an isAdmin method in your User model
+            return redirect()->route('admin.dashboard');
+        }
+
+        // If not an admin, you can provide a default redirection or leave it to the intended route
+        return redirect()->intended($this->redirectPath());
     }
 }
