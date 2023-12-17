@@ -46,6 +46,6 @@ class LoginController extends Controller
         }
 
         // If not an admin, you can provide a default redirection or leave it to the intended route
-        return redirect()->intended($this->redirectPath());
+        return redirect()->intended('/home');
     }
 }
