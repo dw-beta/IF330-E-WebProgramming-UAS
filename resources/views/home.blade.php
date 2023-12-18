@@ -641,7 +641,7 @@ on<!DOCTYPE html>
                 berkualitas bagi peserta didik dan unggul dalam bidang keagamaan sehingga dapat mewujudkan generasi yang
                 berkarakter positif dan berakhlak mulia.
             </div>
-            <img src="{{ asset('images/home/about.jpg') }}">
+            <img src="{{ asset('images/home/about.jpg') }}" >
         </div>
     </div>
     <div class="visi-misi">

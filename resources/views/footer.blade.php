@@ -230,8 +230,8 @@
                     </div>
                     <div class="col-lg-3 item social">
                         <h3>Media Sosial</h3>
-                        <a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
-                                class="icon ion-social-facebook"></i></a><a href="#"><i
+                        <a href="https://instagram.com/ypiarridhotangerang?igshid=MzMyNGUyNmU2YQ=="><i class="icon ion-social-instagram"></i></a><a href="https://m.facebook.com/people/Sdit-Ar-Ridho-Tangerang/100086316860334/"><i
+                                class="icon ion-social-facebook"></i></a><a href="https://www.youtube.com/@ypiarridhotangerang8959"><i
                                 class="icon ion-social-youtube"></i></a>
                     </div>
                 </div>
