@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,25 +27,7 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/kegiatan', function () {
-    return view('kegiatan');
-});
-
-Route::get('/fasilitas', function () {
-    return view('fasilitas');
-});
-
-Route::get('/ppdb', function () {
-    return view('ppdb');
-});
-
-Route::get('/kontak', function () {
-    return view('kontak');
-});
-
-Route::get('/berita', function () {
-    return view('berita');
-});
+// ... (other routes)
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -56,8 +39,13 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::post('/submit-registration', [RegistrationController::class, 'store'])->name('submit.registration');
 Route::get('/registration-confirmation', [RegistrationController::class, 'showConfirmation'])->name('registration.confirmation');
 
-//Route::controller(HomeController::class)->group(function(){
-//    Route::get('/index', 'home')->name('homepage.home');
-//});
+// Allow access to the admin dashboard without authentication
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    // Add other admin routes here
+    Route::put('/make-admin/{userId}', [AdminController::class, 'makeAdmin'])->name('admin.make-admin');
+});
 
-//Route::get('/home', [HomeController::class, "home"])->name("homepage.home");
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+// Existing routes...
