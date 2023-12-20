@@ -69,116 +69,13 @@
         .card-title {
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
+            display: flex;
+            justify-content: center;
         }
 
         .container {
             max-width: 1200px;
             width: 95%;
-        }
-
-        .slider-wrapper {
-            position: relative;
-        }
-
-        .slider-wrapper .slide-button {
-            position: absolute;
-            top: 50%;
-            outline: none;
-            border: none;
-            height: 50px;
-            width: 50px;
-            z-index: 5;
-            color: #fff;
-            display: flex;
-            cursor: pointer;
-            font-size: 2.2rem;
-            background: #FFD875;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .slider-wrapper .slide-button:hover {
-            background: #FFFACD;
-            color: #FFD875;
-        }
-
-        .slider-wrapper .slide-button#prev-slide {
-            left: -25px;
-            display: none;
-        }
-
-        .slider-wrapper .slide-button#next-slide {
-            right: -25px;
-        }
-
-        .slider-wrapper .image-list {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 18px;
-            font-size: 0;
-            list-style: none;
-            margin-bottom: 30px;
-            overflow-x: hidden;
-            scrollbar-width: none;
-        }
-
-        .slider-wrapper .image-list::-webkit-scrollbar {
-            display: none;
-        }
-
-        .slider-wrapper .image-list .image-item {
-            width: 325px;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .container .slider-scrollbar {
-            height: 24px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        .slider-scrollbar .scrollbar-track {
-            background: #FFD875;
-            width: 100%;
-            height: 2px;
-            display: flex;
-            align-items: center;
-            border-radius: 4px;
-            position: relative;
-        }
-
-        .slider-scrollbar:hover .scrollbar-track {
-            height: 4px;
-        }
-
-        .slider-scrollbar .scrollbar-thumb {
-            position: absolute;
-            background: #FFFACD;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-            height: 100%;
-            cursor: grab;
-            border-radius: inherit;
-        }
-
-        .slider-scrollbar .scrollbar-thumb:active {
-            cursor: grabbing;
-            height: 8px;
-            top: -2px;
-        }
-
-        .slider-scrollbar .scrollbar-thumb::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -10px;
-            bottom: -10px;
         }
 
         .ekstra {
@@ -210,19 +107,6 @@
             .card-title {
                 font-size: 16px; /* Adjust font size for card titles */
             }
-
-            .slider-wrapper .image-list {
-                grid-template-columns: repeat(2, 1fr); /* Modify columns for image list */
-                gap: 10px; /* Adjust gap between images */
-            }
-
-            .slider-scrollbar {
-                display: none; /* Hide scrollbar for smaller devices */
-            }
-
-            .slider-wrapper .slide-button {
-                display: none; /* Hide slide buttons on smaller screens */
-            }
         }
 
         /* RESPONSIVE TABLET */
@@ -238,19 +122,6 @@
             .card-title {
                 font-size: 20px; /* Slightly increase font size for card titles */
             }
-
-            .slider-wrapper .image-list {
-                grid-template-columns: repeat(3, 1fr); /* Modify columns for image list */
-                gap: 15px; /* Adjust gap between images */
-            }
-
-            .slider-scrollbar {
-                display: block; /* Show scrollbar */
-            }
-
-            .slider-wrapper .slide-button {
-                display: flex; /* Display slide buttons */
-            }
         }
     </style>
 </head>
@@ -265,33 +136,33 @@
     <div class="kegiatan" data-aos="zoom-in-up">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
-                <div class="card h-100" style="border-radius: 30px;">
+                <div class="card h-100">
                     <img src="{{ asset('images/keagamaan/Rutinitas_Sholat.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #e2c386">
                         <h5 class="card-title">Rutinitas Sholat</h5>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100" style="border-radius: 30px;">
+                <div class="card h-100">
                     <img src="{{ asset('images/keagamaan/Rutinitas_Sholat_2.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #e2c386">
                         <h5 class="card-title">Rutinitas Sholat</h5>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100" style="border-radius: 30px;">
+                <div class="card h-100">
                     <img src="{{ asset('images/keagamaan/Rutinitas_Sholat_3.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #e2c386">
                         <h5 class="card-title">Rutinitas Sholat</h5>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100" style="border-radius: 30px;">
+                <div class="card h-100">
                     <img src="{{ asset('images/keagamaan/Murojaah_Al-Quran.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #e2c386">
                         <h5 class="card-title">Murojaah Al-Quraan</h5>
                     </div>
                 </div>
@@ -302,104 +173,106 @@
     <div class="ekstra" data-aos="zoom-in-up">
         <div class="title">KEGIATAN EKSTRAKURIKULER</div>
     </div>
-    <div class="container" data-aos="zoom-in-up">
-        <div class="slider-wrapper">
-            <button id="prev-slide" class="slide-button material-symbols-rounded">
-                < </button>
-                    <ul class="image-list">
-                        <img class="image-item" src="{{ asset('images/ekskul/Bahasa_Jerman.jpeg') }}" style="border-radius: 40px;" alt="img-1" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Kaligrafi.jpeg') }}" style="border-radius: 40px;" alt="img-2" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Marawis_Hadroh.jpeg') }}" style="border-radius: 40px;" alt="img-3" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Pengembangan_Literasi.jpeg') }}" style="border-radius: 40px;" alt="img-4" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Seni_Lukis.jpeg') }}" style="border-radius: 40px;" alt="img-5" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Pramuka.jpeg') }}" style="border-radius: 40px;" alt="img-6" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Pencak_Silat.jpeg') }}" style="border-radius: 40px;" alt="img-7" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Taekwondo.jpeg') }}" style="border-radius: 40px;" alt="img-8" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Panahan.jpeg') }}" style="border-radius: 40px;" alt="img-9" />
-                        <img class="image-item" src="{{ asset('images/ekskul/Renang.jpeg') }}" style="border-radius: 40px;" alt="img-10" />
-                    </ul>
-                    <button id="next-slide" class="slide-button material-symbols-rounded">
-                        >
-                    </button>
+    <div class="kegiatan" data-aos="zoom-in-up">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Bahasa_Jerman.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Bahasa Jerman</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Kaligrafi.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Kaligrafi</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Marawis_Hadroh.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Marawis Hadroh</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Pengembangan_Literasi.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Pengembangan Literasi</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-                <div class="scrollbar-thumb"></div>
+    </div>
+    <div class="kegiatan" data-aos="zoom-in-up">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Seni_Lukis.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Seni Lukis</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Pramuka.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Pramuka</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Pencak_Silat.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Pencak Silat</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Taekwondo.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Taekwondo</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kegiatan" data-aos="zoom-in-up">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Panahan.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Panahan</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('images/ekskul/Renang.jpeg') }}" class="card-img-top" style="height: 75%" alt="...">
+                    <div class="card-body" style="background-color: #e2c386">
+                        <h5 class="card-title">Renang</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
             </div>
         </div>
     </div>
     <br>
-    <br>
-    <br>
     @include ('footer')
 
     <script>
-        const initSlider = () => {
-            const imageList = document.querySelector(".slider-wrapper .image-list");
-            const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-            const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
-            const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-            // Handle scrollbar thumb drag
-            scrollbarThumb.addEventListener("mousedown", (e) => {
-                const startX = e.clientX;
-                const thumbPosition = scrollbarThumb.offsetLeft;
-                const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb
-                    .offsetWidth;
-
-                // Update thumb position on mouse move
-                const handleMouseMove = (e) => {
-                    const deltaX = e.clientX - startX;
-                    const newThumbPosition = thumbPosition + deltaX;
-                    // Ensure the scrollbar thumb stays within bounds
-                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-                    scrollbarThumb.style.left = `${boundedPosition}px`;
-                    imageList.scrollLeft = scrollPosition;
-                }
-                // Remove event listeners on mouse up
-                const handleMouseUp = () => {
-                    document.removeEventListener("mousemove", handleMouseMove);
-                    document.removeEventListener("mouseup", handleMouseUp);
-                }
-                // Add event listeners for drag interaction
-                document.addEventListener("mousemove", handleMouseMove);
-                document.addEventListener("mouseup", handleMouseUp);
-            });
-            // Slide images according to the slide button clicks
-            slideButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    const direction = button.id === "prev-slide" ? -1 : 1;
-                    const scrollAmount = imageList.clientWidth * direction;
-                    imageList.scrollBy({
-                        left: scrollAmount,
-                        behavior: "smooth"
-                    });
-                });
-            });
-            // Show or hide slide buttons based on scroll position
-            const handleSlideButtons = () => {
-                slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-                slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-            }
-            // Update scrollbar thumb position based on image scroll
-            const updateScrollThumbPosition = () => {
-                const scrollPosition = imageList.scrollLeft;
-                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth -
-                    scrollbarThumb.offsetWidth);
-                scrollbarThumb.style.left = `${thumbPosition}px`;
-            }
-            // Call these two functions when image list scrolls
-            imageList.addEventListener("scroll", () => {
-                updateScrollThumbPosition();
-                handleSlideButtons();
-            });
-        }
-        window.addEventListener("resize", initSlider);
-        window.addEventListener("load", initSlider);
-
         AOS.init();
     </script>
 </body>
