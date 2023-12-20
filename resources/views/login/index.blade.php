@@ -12,12 +12,20 @@
         html, body {
             height: 100%;
             font-family: 'Poetsen One', sans-serif;
-            background-color: rgba(255, 216, 117, 0.60);
+            background: linear-gradient(90deg, rgba(215, 197, 168, 1) 0%, rgba(250, 207, 149, 1) 25%, rgba(255, 227, 132, 0.4066001400560224) 100%);
         }
 
         .form-signin {
             max-width: 430px;
             padding: 1rem;
+        }
+
+        .form-signin h1 {
+            display: flex;
+            justify-content: center;
+        }
+        .form-signin p{
+            font-size: 12px;
         }
 
         .form-signin form {
@@ -73,26 +81,27 @@
         }
 
         .btn-primary {
-            background-color: #f2c11f;
+            background-color: #ffa123;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
-            border-color: black;
+            border-color: #ffa123;
             transition: background-color 0.3s ease-in-out;
         }
 
         .btn-primary:hover {
             background-color: #f5cb40;
-            border-color: black;
+            border-color: #f5cb40;
             color: #fff;
         }
     </style>
 </head>
 <body>
-    <main class="form-signin w-100 m-auto">
+    <main class="form-signin w-100 m-auto py-5">
         <form action="{{ url('/login') }}" method="post">
             @csrf
-            <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+            <h1 class="h3 mb-3 fw-normal">Login Admin</h1>
+            <p>Login Khusus Untuk Admin dan Pihak Sekolah. Jika Bukan Admin Atau Pihak Sekolah Harap Kembali Ke Halaman Home</p>
             
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingUserName" name="username" placeholder="Your Name">
@@ -109,10 +118,6 @@
             </div>
     
             <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-
-            <div class="register-button">
-                <a href="register">Not yet registed? Register here!</a>
-            </div>
         </form>
     </main>
 </body>
