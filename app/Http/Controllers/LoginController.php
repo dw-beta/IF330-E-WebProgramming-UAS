@@ -17,7 +17,7 @@ class LoginController extends Controller
         $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect('/home');
+            return redirect()->route('admin.dashboard');
         }
 
         return back()->withErrors(['username' => 'Invalid credentials']);
