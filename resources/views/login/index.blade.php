@@ -145,7 +145,7 @@
                         placeholder="Your Name">
                     <label for="floatingUserName">Username</label>
                 </div>
-
+                <br>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" name="password"
                         placeholder="Password">
